@@ -55,9 +55,3 @@ mechant_answer_button.click()
 check_button.click()
 assert complete_msg.text == 'Trial Complete' # turi gauti tokia reiksme kokia parasyta
 time.sleep(10)
-
-
-
-
-
-

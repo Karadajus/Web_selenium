@@ -32,5 +32,3 @@ my_select.select_by_visible_text("Beets")
 time.sleep(10)
 # >>> [elem.text for elem in my_select.options]
 # ['Bears', 'Beets', 'Battlestar Galactica']
-
-
