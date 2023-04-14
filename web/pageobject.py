@@ -15,11 +15,10 @@ chrome_options.add_experimental_option("excludeSwitches", ["enable-logging"])
 browser = webdriver.Chrome(options=chrome_options)
 
 
-
 class TrainingGroundPage:
     def __init__(self, driver):
         self.driver = driver
-        self.url = 'https://techstepacademy.com/training-ground'
+        self.url = "https://techstepacademy.com/training-ground"
 
     def go(self):
         self.driver.get(self.url)
@@ -29,7 +28,6 @@ class TrainingGroundPage:
         inpt.clear()
         inpt.send_keys(text)
 
-
     def get_input_text(self):
         inpt = self.driver.find_element(By.ID, "ipt1")
         elem_text = inpt.get_attribute("value")
@@ -37,10 +35,11 @@ class TrainingGroundPage:
         return elem_text
 
     def click_button_1(self):
-        self.driver.find_element(By.ID, 'b1').click()
+        self.driver.find_element(By.ID, "b1").click()
         # time.sleep(10)
         alert = self.driver.switch_to.alert
         alert.accept()
+
 
 # Our test
 
@@ -55,5 +54,7 @@ trng_page.type_into_input(test_value)
 trng_page.click_button_1()
 # time.sleep(10)
 txt_from_input = trng_page.get_input_text()
-assert txt_from_input == test_value, f"Test Failed: Input did not match expected {test_value}."
+assert (
+    txt_from_input == test_value
+), f"Test Failed: Input did not match expected {test_value}."
 print("Passed")

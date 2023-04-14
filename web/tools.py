@@ -26,7 +26,7 @@ browser.get("https://techstepacademy.com/training-ground")
 
 ## Dropdown -- select object reikia importuoti
 
-sel = browser.find_element(By.ID, 'sel1')
+sel = browser.find_element(By.ID, "sel1")
 my_select = Select(sel)
 my_select.select_by_visible_text("Beets")
 time.sleep(10)

@@ -35,7 +35,7 @@ secret_answer_button = browser.find_element(By.CSS_SELECTOR, "button#r2Butn")
 ## Two mechants
 # .text paima texta
 richest_mechant_name = browser.find_element(By.XPATH, "//p[text()='3000']/../span").text
-mechant_input = browser.find_element(By.ID, 'r3Input')
+mechant_input = browser.find_element(By.ID, "r3Input")
 mechant_answer_button = browser.find_element(By.CSS_SELECTOR, "button#r3Butn")
 check_button = browser.find_element(By.CSS_SELECTOR, "button#checkButn")
 complete_msg = browser.find_element(By.CSS_SELECTOR, "div#trialCompleteBanner h4")
@@ -43,7 +43,7 @@ complete_msg = browser.find_element(By.CSS_SELECTOR, "div#trialCompleteBanner h4
 # Run scripts
 # time.sleep(10)
 
-stone_input.send_keys('rock')
+stone_input.send_keys("rock")
 stone_answer_button.click()
 password = stone_result.text
 
@@ -53,5 +53,5 @@ secret_answer_button.click()
 mechant_input.send_keys(richest_mechant_name)
 mechant_answer_button.click()
 check_button.click()
-assert complete_msg.text == 'Trial Complete' # turi gauti tokia reiksme kokia parasyta
+assert complete_msg.text == "Trial Complete"  # turi gauti tokia reiksme kokia parasyta
 time.sleep(10)
